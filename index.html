@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="4;url=https://t.me/+p9CFCtRft_piMjQy" />
   <title>Переход в Telegram...</title>
   <style>
     * {
@@ -132,5 +131,22 @@
     <p>Если не перенаправило — нажмите кнопку ниже:</p>
     <a class="btn" href="https://t.me/+p9CFCtRft_piMjQy">Открыть Telegram</a>
   </div>
+
+  <script>
+    const username = "https://t.me/+p9CFCtRft_piMjQy"; // без @
+    const userAgent = navigator.userAgent  navigator.vendor  window.opera;
+
+    function openTelegram() {
+      if (/android/i.test(userAgent)) {
+        window.location.href = intent://resolve?domain=${username}#Intent;scheme=tg;package=org.telegram.messenger;end;
+      } else if (/iPhone|iPad|iPod/.test(userAgent)) {
+        window.location.href = tg://resolve?domain=${username};
+      } else {
+        window.location.href = https://t.me/${username};
+      }
+    }
+
+    setTimeout(openTelegram, 700);
+  </script>
 </body>
 </html>
