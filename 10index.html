@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Переход в Telegram...</title>
+  <meta http-equiv="refresh" content="6;url=https://t.me/+p9CFCtRft_piMjQy" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0088cc;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      min-height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 16px;
+    }
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    .logo-circle {
+      background-color: white;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: float 2s infinite ease-in-out;
+    }
+    .logo-circle svg {
+      width: 40px;
+      height: 40px;
+    }
+    h1 {
+      font-size: 1.2em;
+      margin: 0 0 10px;
+    }
+    .dot-wave {
+      display: inline-flex;
+      gap: 4px;
+      margin-left: 4px;
+    }
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: white;
+      animation: wave 1.2s infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes wave {
+      0%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-6px); }
+    }
+    p {
+      font-size: 0.95em;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: white;
+      color: #0088cc;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #e0e0e0;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-circle">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0088cc" d="M120 0c66.3 0 120 53.7 120 120s-53.7 120-120 120S0 186.3 0 120 53.7 0 120 0z"/>
+        <path fill="#fff" d="M56 123.9c37.2-16.3 62-27.1 74.4-32.4 35.4-14.7 42.8-17.3 47.6-17.4 1.1 0 3.5.3 5 1.6 1.3 1.2 1.6 2.9 1.7 4.1.2 1.2.4 3.6.2 5.5-1.7 17.9-9.5 61-13.4 80.9-1.6 8.5-4.7 11.4-7.7 11.7-6.6.6-11.7-4.4-18.2-8.6-10.1-6.6-15.8-10.7-25.5-17.2-11.3-7.5-4-11.6 2.5-18.3 1.7-1.7 30.5-28.1 31-30.5.1-.4.1-1.7-.6-2.4-.8-.7-2-0.5-2.8-.3-1.2.3-19.9 12.6-56.3 36.8-5.3 3.6-10.1 5.4-14.4 5.3-4.7-.1-13.8-2.7-20.6-5-8.3-2.7-14.9-4.1-14.3-8.7.3-2.2 3.4-4.5 9.4-6.9z"/>
+      </svg>
+    </div>
+    <h1>
+      Переходим в Telegram
+      <span class="dot-wave">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </span>
+    </h1>
+    <p>Если не перенаправило — нажмите кнопку ниже:</p>
+    <a class="btn" id="openBtn" href="https://t.me/+p9CFCtRft_piMjQy">Открыть Telegram</a>
+  </div>
+
+  <script>
+    const userAgent = navigator.userAgent  navigator.vendor  window.opera;
+    const link = document.getElementById("openBtn");
+
+    if (/android/i.test(userAgent)) {
+      link.href = "intent://t.me/+p9CFCtRft_piMjQy#Intent;scheme=https;package=com.android.chrome;end";
+    } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+      const match = userAgent.match(/OS (\d+)_/);
+      const version = match ? parseInt(match[1]) : null;
+
+      if (version >= 17) {
+        link.href = "x-safari-https://t.me/+p9CFCtRft_piMjQy";
+      } else {
+        link.href = "https://t.me/+p9CFCtRft_piMjQy";
+      }
+    }
+  </script>
+</body>
+</html>
